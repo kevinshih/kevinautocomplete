@@ -1,0 +1,16 @@
+### 配置数据库的连接方式
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:/portal/vespaManagementConsole.db
+    username:
+    password:
+### sqlite需要自己配置连接方式
+  jpa:
+    database-platform: com.ehsn.config.SQLiteDialect
+    generate-ddl: false
+    properties:
+      hibernate:
+        ddl-auto: validate
+        show_sql: false
+    show-sql: true
